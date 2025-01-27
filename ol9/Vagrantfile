@@ -13,10 +13,12 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "oraclelinux/9"
+  ## FOR OL8: config.vm.box = "oraclelinux/8"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   config.vm.box_url = "https://oracle.github.io/vagrant-projects/boxes/oraclelinux/9.json"
+  ## FOR OL8: config.vm.box_url = "https://oracle.github.io/vagrant-projects/boxes/oraclelinux/8.json"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -31,6 +33,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
+  ## SET YOUR IP:
   config.vm.network "private_network", ip: "192.168.33.10"
 
   # Create a public network, which generally matched to bridged network.
